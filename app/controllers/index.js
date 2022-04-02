@@ -34,9 +34,9 @@ exports.filterShows = data => {
     for (const show of data) {
       if (show.drm && show.episodeCount > 0)
         filteredShow.push({
-          'image': show.image.showImage,
-          'slug' : show.slug,
-          'title': show.title,
+          'image': show.image ? show.image.showImage : null,
+          'slug' : show.slug ? show.slug : null,
+          'title': show.title ? show.title : null,
         });
     }
 
