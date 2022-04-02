@@ -20,7 +20,7 @@ exports.getShows = (req, res) => {
 
     res.send(response);
 
-  } catch(error) {
+  } catch(err) {
     res.status(500).send({
       error: err.message || "Some error occurred while processing the media show API."
     });
