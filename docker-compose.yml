@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  node:
+    container_name: media_api_backend
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - './app:/usr/src/app'
+      - '/usr/src/app/node_modules'
+
+    environment:
+      - NODE_ENV=development
+    ports:
+      - '${NODE_PORT}:${NODE_PORT}'
